@@ -1,3 +1,4 @@
 # Algorithmes
-Algo
+Editeur de texte ayant un systeme d'autocompletion basé sur la probabilité que l'on ecrive un mot.
+IL enumere aussi les mots erreurs.
 
