@@ -1,3 +1,6 @@
+package source.core.utils ;
+
+import source.core.utils.Memoire;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,8 +24,8 @@ import javax.swing.JFrame;
 
 
 public class Memoire {
-	
-	
+
+
 	/*
 	 * Creation d'un fichier  : gestion de la sauvegarde
 	 * nomF = nom du fichier Vide
@@ -30,12 +33,12 @@ public class Memoire {
 	public Memoire (String nomF) {
 		File fic = new File(nomF);
 	}
-	
+
 	public Memoire(){}
-	
+
 	/*
 	*Fonction qui recupere la chaine de caractere contenu dans le fichier selectionne
-	*  return String 
+	*  return String
 	*/
 	public String af (){
 		String chaine="";
@@ -51,43 +54,43 @@ public class Memoire {
 				ex.printStackTrace();
 			}
 		}
-		//lecture du fichier texte	
+		//lecture du fichier texte
 		try{
-			InputStream ips=new FileInputStream(fichier); 
+			InputStream ips=new FileInputStream(fichier);
 			InputStreamReader ipsr=new InputStreamReader(ips);
 			BufferedReader br=new BufferedReader(ipsr);
 			String ligne;
 			while ((ligne=br.readLine())!=null){
-		
+
 				chaine+=ligne+"\n";
 			}
-			br.close(); 
-		}		
+			br.close();
+		}
 		catch (Exception e){
-			
-			 JOptionPane	jop3 ; 
+
+			 JOptionPane	jop3 ;
 				jop3 = new JOptionPane();
 				jop3.showMessageDialog(null, "Le fichier n'existe pas !", "Erreur",
 				JOptionPane.ERROR_MESSAGE);
 			return "" ;
 		}
 		System.out.println(chaine);
-		
-		
-		
-		
+
+
+
+
 		return chaine ;
-	
+
 	}
-	
-	
+
+
 	/*
 	*Fonction qui prends en paramettre le contenu de l'editeur et qui l'enregistre ensuite dans un fichier texte a l'emplacementindique
-	*arg : String 
+	*arg : String
 	*return void
 	*/
-	
-	
+
+
 	   public void ecrire(String texte)
 		{
 				JFileChooser JFC = new JFileChooser();
@@ -96,11 +99,11 @@ public class Memoire {
 			try {
 				String chemin=JFC.getSelectedFile().toString();
 				File fw = new File(chemin);
-				
+
 				FileWriter w=new FileWriter(fw);
 				w.write(texte);
 				w.flush();
-		    		w.close();	
+		    		w.close();
 
 
 			} catch (Exception ex) {
@@ -109,10 +112,7 @@ public class Memoire {
 		}
 
 		}
-	   
 
-	   
+
+
    }
- 
- 
-

@@ -1,3 +1,10 @@
+package source.core.controllerView ;
+
+import source.core.controllerView.ControleurVue ;
+import source.core.utils.Memoire;
+import source.core.modele.Modele;
+import source.core.utils.*;
+
 import java.util.*;
 import javax.swing.*;
 import javax.swing.event.*;
@@ -36,10 +43,10 @@ public class ControleurVue extends JFrame{
 		 area.setText("");
 		}
 	 });
-	
+
 	item2.addActionListener(new ActionListener(){
 		public void actionPerformed(ActionEvent event){
-		 
+
 		area.setText(memoire.af());
 		}
 	 });
@@ -55,14 +62,14 @@ public class ControleurVue extends JFrame{
 			e.printStackTrace();
 		    }
 		    File file= new File(name);
-		   
+
 	    		*/
 		    memoire.ecrire( area.getText());
-					
+
 		}
 	 });
 
- 
+
 	bar.add(jmenu);
 	setJMenuBar(bar);
 	c = getContentPane();
@@ -111,7 +118,7 @@ public class ControleurVue extends JFrame{
 		    bool = false;
 		    menu.setVisible(false);
 		}
-	    });	
+	    });
 	jlist.addMouseMotionListener(new MouseMotionAdapter(){
 		public void mouseMoved(MouseEvent e){
 		    int i = jlist.locationToIndex(e.getPoint());
@@ -151,7 +158,7 @@ public class ControleurVue extends JFrame{
 		}
 	    });
 
-	
+
 	setVisible(true);
     }
 
@@ -194,7 +201,7 @@ public class ControleurVue extends JFrame{
 	    menu.setLocation((int)(posCurseur.getX() + area.getLocationOnScreen().getX()),(int)(posCurseur.getY() + area.getLocationOnScreen().getY() + 20));
 	    menu.setVisible(true);
 	    bool = true;
-	    
+
 	}
 	else{
 	    menu.setVisible(false);

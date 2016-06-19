@@ -1,8 +1,12 @@
+package source.core.utils ;
+
+import source.core.utils.Arbre ;
+
 import java.util.*;
 import java.io.*;
 import java.lang.*;
 
-class Arbre implements Serializable{
+public class Arbre implements Serializable{
 
     public boolean bool;
     public int pertinence;
@@ -86,4 +90,3 @@ class Arbre implements Serializable{
 	return a;
     }
 }
-    
